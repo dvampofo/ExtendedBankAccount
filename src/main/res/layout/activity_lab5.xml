@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="eecs1022.lab5application.Lab5Activity">
+
+    <TextView
+        android:id="@+id/labelClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="Enter name of client:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelClient"
+        android:layout_marginTop="34dp"
+        android:text="Enter balance of client:" />
+
+    <EditText
+        android:id="@+id/inputClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelClient"
+        android:layout_alignBottom="@+id/labelClient"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/labelClient"
+        android:layout_toRightOf="@+id/labelClient"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/inputBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelBalance"
+        android:layout_alignBottom="@+id/labelBalance"
+        android:layout_alignEnd="@+id/inputClient"
+        android:layout_alignRight="@+id/inputClient"
+        android:layout_toEndOf="@+id/labelBalance"
+        android:layout_toRightOf="@+id/labelBalance"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inputBalance"
+        android:layout_marginTop="17dp"
+        android:onClick="buttonCreateAccount"
+        android:text="Create Account" />
+
+    <TextView
+        android:id="@+id/labelService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttonCreateAccount"
+        android:layout_marginTop="19dp"
+        android:text="Select a service type:" />
+
+    <TextView
+        android:id="@+id/labelFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelService"
+        android:layout_marginTop="30dp"
+        android:text="Enter name of FROM client (TRANSFER AND WITHDRAW):" />
+
+    <TextView
+        android:id="@+id/labelTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelFrom"
+        android:layout_marginTop="32dp"
+        android:text="Enter name of TO client (TRANSFER AND DEPOSIT):" />
+
+    <Spinner
+        android:id="@+id/spinnerService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelService"
+        android:layout_toEndOf="@+id/labelService"
+        android:layout_toRightOf="@+id/labelService"
+        android:entries="@array/options"/>
+
+    <EditText
+        android:id="@+id/inputFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelFrom"
+        android:layout_alignBottom="@+id/labelFrom"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/labelAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/inputAmount"
+        android:layout_alignBottom="@+id/inputAmount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Enter an amount:" />
+
+    <EditText
+        android:id="@+id/inputTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelTo"
+        android:layout_alignBottom="@+id/labelTo"
+        android:layout_alignEnd="@+id/inputClient"
+        android:layout_alignRight="@+id/inputClient"
+        android:layout_toEndOf="@+id/labelTo"
+        android:layout_toRightOf="@+id/labelTo"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelAmount"
+        android:layout_marginTop="26dp"
+        android:onClick="buttonTransaction"
+        android:text="Complete transaction" />
+
+    <EditText
+        android:id="@+id/inputAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/inputClient"
+        android:layout_alignRight="@+id/inputClient"
+        android:layout_below="@+id/inputTo"
+        android:layout_toEndOf="@+id/labelAmount"
+        android:layout_toRightOf="@+id/labelAmount"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/labelClientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttonTransaction"
+        android:layout_marginTop="24dp"
+        android:text="Enter name of client:" />
+
+    <Button
+        android:id="@+id/buttonOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/inputClient"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/inputClient"
+        android:layout_below="@+id/labelClientName"
+        android:layout_marginTop="21dp"
+        android:onClick="buttonOutput"
+        android:text="output statement" />
+
+    <EditText
+        android:id="@+id/inputNameClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelClientName"
+        android:layout_alignBottom="@+id/labelClientName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/labelService"
+        android:layout_toRightOf="@+id/labelService"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/labelAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/inputClient"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/inputClient"
+        android:layout_below="@+id/buttonOutput"
+        android:layout_marginTop="44dp"
+        android:textAlignment="center" />
+
+</android.widget.RelativeLayout>
