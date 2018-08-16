@@ -10,9 +10,11 @@ Assume a bank which provides services (i.e., deposit, withdraw, and transfer) to
 Each client can be characterized by their name, numerical balance, and a history (i.e., collection) of up to
 10 (for this you can assume that the user will not complete more than 10 transactions for each client). Each
 client should be identified by their name. We may want to perform one of the following kinds of transactions:
-– Deposit some amount of money **to** a client’s account.
-– Withdraw some amount of money **from** a client’s account.
-– Transfer some amount of money **from** a client’s account **to** another client’s account.
+
+- Deposit some amount of money **to** a client’s account.
+- Withdraw some amount of money **from** a client’s account.
+- Transfer some amount of money **from** a client’s account **to** another client’s account.
+
 
 
 ## Installation instructions (For MAC only):
